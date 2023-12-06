@@ -17,14 +17,14 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     width: 80%;
-    height: 80%;
+    height: 50%;
     margin:auto auto;
 }
 
 .record {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     float: left;
@@ -67,8 +67,8 @@ body {
 
 .music-title {
     color: rgba(255, 255, 255, 0.888);
-    font-size: 4rem;
-    line-height: 6rem;
+    font-size: 2rem;
+    line-height: 4rem;
 }
 
 .artist {
@@ -78,7 +78,7 @@ body {
 
 .audio-box {
     width: 100%;
-    height: 20%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,14 +141,15 @@ body {
 
 .control {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .time-container {
-    width: 30%;
     color: white;
     font-weight: 300;
     line-height: 50px;
+    grid-template-columns: 1 / 1 / 2 / 2;
 }
 
 .played-time {
@@ -162,10 +163,10 @@ body {
 }
 
 .options {
-    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: 2 / 1 / 3 / 3;
 }
 
 .icons {
@@ -212,9 +213,9 @@ body {
 }
 
 .right-icon-container {
-    width: 30%;
     padding-top: 10px;
     text-align: right;
+    grid-template-columns: 1 / 2 / 2 / 3;
 }
 
 .right-icon {
@@ -367,8 +368,23 @@ body {
     box-shadow: -407px 0 0 400px #42b680;
 }
 
+@media screen and (min-height: 700px) {
+    
+    .record {
+        display: flex;
+    }
 
-@media screen and (min-width: 900px) {
+    .display-container {
+        height: 80%;
+    }
+
+    .audio-box {
+        height: 20%;
+    }
+
+}
+
+@media screen and (min-width: 900px) and (min-height: 700px) {
     .display-container {
         display: block;
         width: 80%;
@@ -395,9 +411,20 @@ body {
     .introduction {
         height: 100%;
     }
+
+    .music-title {
+        color: rgba(255, 255, 255, 0.888);
+        font-size: 3rem;
+        line-height: 6rem;
+    }
+
+    .control {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (min-height: 700px) {
     .display-container {
         display: block;
         width: 80%;
@@ -423,5 +450,11 @@ body {
 
     .introduction {
         height: 100%;
+    }
+
+    .music-title {
+        color: rgba(255, 255, 255, 0.888);
+        font-size: 4rem;
+        line-height: 6rem;
     }
 }
