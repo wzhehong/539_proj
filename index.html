@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Player</title>
+</head>
+<body>
+    <div class="display-container">
+        <div class="record">
+            <div class="record-bg">
+                <div class="record-img" class="rotate-play"></div>
+            </div>
+        </div>
+        <div class="introduction">
+            <div class="introduction-text">
+                <div class="music-title">Title</div>
+                <div class="artist">Artist: 
+                    <span class="artist-name">unknown</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-box">
+        <div class="audio-container">
+            <audio class="audio-tag"></audio>
+
+            <div class="progress">
+                <div class="progress-total">
+                    <div class="progress-play"></div>
+                </div>
+            </div>
+
+            <div class="control">
+                <div class="time-container">
+                    <span class="played-time">00:00</span>&nbsp;/&nbsp;
+                    <span class="audio-time">00:00</span>
+                </div>
+                <div class="options">
+                    <div id="play_mode" class="icons mode"></div>
+                    <div id="skip_backward" class="icons previous"></div>
+                    <div id="play_pause" class="play"></div>
+                    <div id="skip_forward" class="icons next"></div>
+                    <div id="volume" class="icons volume"></div>
+                    <input type="range" id="volumn-togger" class="slider" name="change" value="50" min="0" max="100" step="1">
+                </div>
+                <div class="right-icon-container">
+                    <div id="list" class="right-icon list"></div>
+                    <div id="speed" class="speed">1.0X</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="close-list"></div>
+    <div class="music-list">
+        <div class="music-list-container">
+            <div class="music-list-title">List</div>
+            <hr class="line">
+            <div class="all-list">
+                <div id="song0">迷星叫</div>
+                <div id="song1">壱雫空</div>
+                <div id="song2">碧天伴走</div>
+                <div id="song3">影色舞</div>
+                <div id="song4">歌いましょう鳴らしましょう</div>
+                <div id="song5">潜在表明</div>
+                <div id="song6">音一会</div>
+                <div id="song7">春日影 (MyGO!!!!! ver.)</div>
+                <div id="song8">詩超絆</div>
+                <div id="song9">迷路日々</div>
+                <div id="song10">無路矢</div>
+                <div id="song11">名無声</div>
+                <div id="song12">栞</div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
